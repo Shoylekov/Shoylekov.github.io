@@ -1,0 +1,106 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#about, #projects, #contact {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    font-size: 2em;
+}
+
+.project-list {
+    display: flex;
+    gap: 20px;
+}
+
+.project {
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 5px;
+    width: 45%;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Custom styles Projects */
+.card {
+    border: 1px solid #ddd; /* Light border for cards */
+    border-radius: 8px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+    transform: translateY(-5px); /* Lift effect */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+}
+
+
+/* Styling for the main title */
+.welcome-title {
+    font-size: 3.5rem; /* Large size for the main heading */
+    color: #eeeeee; /* Blue color */
+    font-weight: bold; /* Bold for emphasis */
+    margin-bottom: 20px;
+    letter-spacing: 2px; /* Slight spacing between letters */
+}
+
+/* Highlight the name "Boril" */
+.name-highlight {
+    color: #eeeeee; /* Green color for contrast */
+}
+
+/* Styling for the welcome message */
+.welcome-message {
+    font-size: 1.5rem; /* Smaller size for the subheading */
+    color: #eeeeee; /* Subtle gray for the subheading */
+    font-style: italic; /* Italics for a softer touch */
+    max-width: 80%; /* Limit text width for better readability */
+    margin: 0 auto;
+}
+
