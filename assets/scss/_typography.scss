@@ -1,0 +1,93 @@
+@use 'abstracts' as *;
+@use 'mixins' as *;
+
+body {
+    color: $foreground;
+    background-color: $background;
+    font-family: $ff-base;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    // font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: $accent-1;
+    &:hover {
+        color: $accent-3;
+    }
+    // @include underline;
+    // color: $accent-1;
+    // &:hover, &:focus{
+    //   text-decoration: overline underline;
+    //   color: $accent-2;
+    // }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $ff-headers;
+    margin-bottom: 0.25em;
+}
+
+h1,
+.h1 {
+    font-size: $fs-h1;
+    margin-top: 0;
+    line-height: 1.1em;
+    letter-spacing: 0.05em;
+}
+
+h2,
+.h2 {
+    font-size: $fs-h2;
+    margin-top: 0;
+    line-height: 1.2em;
+}
+
+h3,
+.h3 {
+    font-size: $fs-h3;
+    margin-top: 0;
+    line-height: 1.3em;
+}
+
+h4,
+.h4 {
+    font-size: $fs-h4;
+    margin-top: 0;
+    line-height: 1.4em;
+}
+
+h5,
+.h5 {
+    font-size: $fs-h5;
+    margin-top: 0;
+    line-height: 1.5em;
+}
+
+h6,
+.h6 {
+    font-size: $fs-h6;
+    margin-top: 0;
+    line-height: 1.6em;
+}
+
+pre {
+    font-family: $ff-mono;
+}

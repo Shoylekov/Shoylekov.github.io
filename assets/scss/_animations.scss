@@ -1,0 +1,9 @@
+@use 'abstracts' as *;
+
+.anime {
+    transition: $time ease;
+}
+
+.anime:hover {
+    transform: scale(116%);
+}

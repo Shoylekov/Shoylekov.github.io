@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Roboto&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: hsl(83, 75%, 45%);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(83, 90%, 55%);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  max-height: 0;
+}
+
+/* reset src: https://piccalil.li/blog/a-modern-css-reset/ */
+.page-wrapper {
+  display: grid;
+  grid-template-areas: ". left . right .";
+  grid-template-columns: 2fr 8fr 1fr 11fr 2fr;
+}
+@media (max-width: 1200px) {
+  .page-wrapper {
+    grid-template-columns: 1fr 5fr 1fr 11fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .page-wrapper {
+    grid-template-areas: ". left ." ". right .";
+    grid-template-columns: 1fr 13fr 1fr;
+  }
+}
+.page-wrapper .right {
+  grid-area: right;
+}
+.page-wrapper .left {
+  grid-area: left;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .page-wrapper .left {
+    position: relative;
+    height: auto;
+    top: auto;
+    display: block;
+  }
+}
+
+/* reset src: https://piccalil.li/blog/a-modern-css-reset/ */
+body {
+  color: hsl(200, 0%, 85%);
+  background-color: hsl(200, 20%, 5%);
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: hsl(83, 75%, 45%);
+}
+a:hover {
+  color: hsl(83, 100%, 65%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 0.25em;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  line-height: 1.1em;
+  letter-spacing: 0.05em;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  line-height: 1.2em;
+}
+
+h3,
+.h3 {
+  font-size: 1.65rem;
+  margin-top: 0;
+  line-height: 1.3em;
+}
+
+h4,
+.h4 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  line-height: 1.4em;
+}
+
+h5,
+.h5 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+h6,
+.h6 {
+  font-size: 0.9rem;
+  margin-top: 0;
+  line-height: 1.6em;
+}
+
+pre {
+  font-family: "Anonymice", monospace;
+}
+
+/* reset src: https://piccalil.li/blog/a-modern-css-reset/ */
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10% 0;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 5% 0;
+  }
+}
+
+#hello #name {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+#hello #title {
+  font-family: "Roboto", sans-serif;
+}
+#hello #quote {
+  font-weight: 100;
+  color: hsl(83, 90%, 55%);
+  margin-top: 1.1rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#navigation {
+  padding-top: 2rem;
+}
+@media (max-width: 768px) {
+  #navigation {
+    display: none;
+  }
+}
+#navigation h4 {
+  margin: 0;
+}
+#navigation ul {
+  margin: 0;
+}
+#navigation ul li {
+  line-height: 1.75;
+  font-size: 1.1rem;
+}
+#navigation ul li::marker {
+  color: hsl(200, 0%, 85%);
+  content: "+   ";
+}
+#navigation ul li a {
+  transition: all 0.3236s linear;
+  display: inline;
+  text-decoration: none;
+  background: linear-gradient(to right, hsl(83, 75%, 45%) 0%, hsl(83, 100%, 65%) 98%);
+  background-size: 0px 2px;
+  background-repeat: no-repeat;
+  background-position: left 85%;
+  text-shadow: 0;
+  color: hsl(200, 0%, 85%);
+}
+#navigation ul li a:hover {
+  background-size: 100% 2px;
+  text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.5);
+}
+#navigation ul li a:hover {
+  color: hsl(83, 100%, 65%);
+}
+
+#contact {
+  display: flex;
+  width: 100%;
+  font-size: 2.5rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+#contact a {
+  padding-right: 1rem;
+  color: hsl(199, 15%, 30%);
+  backdrop-filter: blur(2px);
+  border-radius: 0.5rem;
+}
+#contact a:hover {
+  color: hsl(200, 0%, 85%);
+}
+
+#about .wrapper {
+  display: flex;
+  align-items: center;
+}
+#about .wrapper .description {
+  width: 100%;
+  text-align: justify;
+}
+
+#experience .job,
+#education .job {
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+#experience h3,
+#education h3 {
+  margin: 0;
+}
+#experience h6,
+#education h6 {
+  margin: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+#experience li,
+#education li {
+  line-height: 1.75;
+}
+#experience .description,
+#education .description {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 40px;
+}
+
+#projects ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#projects ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+#projects .banner {
+  width: 66%;
+  aspect-ratio: 16/9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  transition: all 0.8s ease;
+}
+#projects .banner .visible,
+#projects .banner .hover {
+  background-color: hsla(172, 66%, 7%, 0.495);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  transition: all 0.8s ease;
+}
+#projects .banner .visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#projects .banner .hover {
+  display: none;
+}
+#projects .banner .hover a {
+  font-size: 2rem;
+  color: hsl(200, 0%, 85%);
+  padding: 1rem 0;
+  transition: all 0.3236s linear;
+  display: inline;
+  text-decoration: none;
+  background: linear-gradient(to right, hsl(83, 75%, 45%) 0%, hsl(83, 100%, 65%) 98%);
+  background-size: 0px 4px;
+  background-repeat: no-repeat;
+  background-position: left 85%;
+  text-shadow: 0;
+}
+#projects .banner .hover a:hover {
+  background-size: 100% 4px;
+  text-shadow: 0 2.5px 4px rgba(0, 0, 0, 0.5);
+}
+#projects .banner:hover {
+  box-shadow: 1rem 1rem 3rem 2rem #1c1c1c;
+  width: 72%;
+}
+#projects .banner:hover .visible {
+  display: none;
+}
+#projects .banner:hover .hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#projects .topics {
+  display: flex;
+}
+#projects .topics li {
+  display: block;
+  background-color: hsla(83, 100%, 50%, 0.5);
+  border-radius: 1rem;
+  padding: 0.25rem 0.75rem;
+  margin: 0.75rem 0.25rem;
+  font-size: 0.9rem;
+  font-family: "Anonymice", monospace;
+}
+
+.tag {
+  position: relative;
+  color: hsl(83, 100%, 65%);
+  font-family: "Anonymice", monospace;
+  right: 1rem;
+}
+.tag.start {
+  top: -1rem;
+}
+.tag.end {
+  position: relative;
+  top: 1rem;
+}
+
+#background {
+  position: fixed;
+  justify-content: flex-end;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+  color: hsl(200, 20%, 15%);
+  overflow: hidden;
+  padding: 0;
+  margin-left: 20.8333333333%;
+}
+
+#scroll {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  color: hsl(200, 0%, 85%);
+  font-size: 1.4rem;
+  font-family: "Anonymice", monospace;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+@media (max-width: 768px) {
+  #scroll {
+    display: block;
+  }
+}
+#scroll:hover {
+  color: hsl(83, 100%, 65%);
+  scale: 1.3;
+}
+
+.anime {
+  transition: 0.1618s ease;
+}
+
+.anime:hover {
+  transform: scale(116%);
+}
+
+.blog-image {
+  width: 100%; /* Makes the image full-width of its container */
+  max-width: 500px; /* Limits the image width for a more controlled layout */
+  height: auto; /* Maintains the image's aspect ratio */
+  margin-top: 20px; /* Adds space above the image */
+  margin-bottom: 20px; /* Adds space below the image */
+  display: block; /* Ensures the image is displayed as a block element */
+  border-radius: 10px; /* Optional: Adds rounded corners to the image */
+  margin-left: 90px;
+}
+
+/*# sourceMappingURL=main.css.map */
